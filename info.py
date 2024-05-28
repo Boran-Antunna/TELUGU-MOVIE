@@ -1,3 +1,4 @@
+import os
 import re, time
 from os import environ
 from Script import script 
@@ -11,9 +12,9 @@ def is_enabled(value, default):
 
 
 # PyroClient Setup 
-API_ID = int(environ['API_ID', "25976580"])
-API_HASH = environ['API_HASH', "b5562ab77a96e49bc9dd78cc103c6333"]
-BOT_TOKEN = environ['BOT_TOKEN', "6646920619:AAEweb6177oKET72HTGQCLwCjEO3uqNqVDA"]
+API_ID = int(os.getenv('API_ID', "25976580"))
+API_HASH = os.getenv('API_HASH', "b5562ab77a96e49bc9dd78cc103c6333")
+BOT_TOKEN = os.getenv('BOT_TOKEN', "6646920619:AAEweb6177oKET72HTGQCLwCjEO3uqNqVDA")
 
 # Bot settings
 WEBHOOK = bool(environ.get("WEBHOOK", True)) # for web support on/off
